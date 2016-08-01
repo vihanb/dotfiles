@@ -1,6 +1,7 @@
 set nocompatible
 filetype off
 
+" Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 
@@ -14,27 +15,34 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Nopik/vim-nerdtree-direnter'
 
+filetype plugin indent on
+
+" Coloring / Themes
 let g:solarized_termcolors=256
 syntax on
 set background=dark
 colorscheme solarized
 filetype plugin on
 
+" Plugin Specific Config
 let g:license_author = 'Vihan'
 let g:license_email = 'contact@vihan.org'
 let g:airline#extensions#tabline#enabled = 1
 
+" Spacing
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
 set autoindent
 
+" Syntax Highlighitng
 autocmd BufRead *.es6 set ft=javascript
 autocmd BufRead *.cdr set ft=javascript
 
+" Various settings
 set nu
-let laststatus=2
+set laststatus=2
 set clipboard=unnamed
 set autoindent
 set fileencoding=utf8
@@ -51,10 +59,6 @@ inoremap <C-l> <C-o>o
 " Remap undo
 inoremap <C-u> <esc>:u<cr>i
 nnoremap <C-u> <esc>:u<cr>i
-
-" Remap j <-> k
-nnoremap j k
-nnoremap k j
 
 " Remap :noh
 nnoremap <Bslash> :noh<cr>
