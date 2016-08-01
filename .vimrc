@@ -40,10 +40,21 @@ set autoindent
 set fileencoding=utf8
 
 " Remap Buffer switching
-map <silent> fr :bn<cr>
-map <silent> fR :bp<cr>
-map <silent> fd :bw<cr> 
+noremap <silent> fr :bn<cr>
+noremap <silent> fR :bp<cr>
+noremap <silent> fd :bw<cr> 
 
 " Remap insert mode jumping
-imap <C-e> <C-o>$
-imap <C-l> <C-o>o
+inoremap <C-e> <C-o>$
+inoremap <C-l> <C-o>o
+
+" Remap undo
+inoremap <C-u> <esc>:u<cr>i
+nnoremap <C-u> <esc>:u<cr>i
+
+" Remap j <-> k
+nnoremap j k
+nnoremap k j
+
+" Remap :noh
+nnoremap <Bslash> :noh<cr>
