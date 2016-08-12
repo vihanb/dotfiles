@@ -14,7 +14,7 @@ alias python='python3'
 
 # Prompt
 source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
-PS1='\[\033[01;31m\]\u\[\033[00m\]:\[\033[032m\]\w\[\033[033m\]$(__git_ps1 " (%s)")\033[00m\] $ '
+export PS1="\[$(tput bold)\]\[\033[38;5;9m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]:\[\033[38;5;208m\]\w\[$(tput sgr0)\]\[\033[38;5;11m\]$(__git_ps1 " (%s)")\[$(tput sgr0)\] \\$ "
 
 source ~/.git-completion.bash # from https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash
 
