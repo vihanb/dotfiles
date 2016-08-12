@@ -57,8 +57,8 @@ inoremap <C-e> <C-o>$
 inoremap <C-l> <C-o>o
 
 " Remap undo
-inoremap <C-u> <esc>:u<cr>i
-nnoremap <C-u> <esc>:u<cr>i
+inoremap <C-z> <esc>:u<cr>i
+nnoremap <C-z> <esc>:u<cr>i
 
 " Remap :noh
 nnoremap <Bslash> :noh<cr>
